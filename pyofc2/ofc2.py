@@ -98,8 +98,8 @@ linefactory = ofc_factory('_line', ['type','alpha', 'colour','color', 'text',
     'fontsize', 'font_size', 'values', 'halo_size', 'width', 'dot_size', 'on_click', 'tip',
     'loop', 'dot_style'])
 line = lambda **kw: linefactory(type='line',**kw)
-line_dot = lambda **kw: linefactory(type='line_dot', **kw)
-line_hollow = lambda **kw: linefactory(type='line_hollow', **kw)
+line_dot = lambda **kw: linefactory(type='line', dot_style={'type':'solid-dot'}, **kw)
+line_hollow = lambda **kw: linefactory(type='line',dot_style={'type':'hollow-dot'}, **kw)
 
 key = ofc_factory('key', ['text', 'size', 'colour', 'font-size'])
 dot_value = ofc_factory('value', ['value', 'colour', 'color', 'tip'])
